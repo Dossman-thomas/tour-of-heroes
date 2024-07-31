@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Hero } from '../hero';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-hero-detail',
@@ -7,5 +8,7 @@ import { Hero } from '../hero';
   styleUrls: ['./hero-detail.component.css']
 })
 export class HeroDetailComponent {
+  heroes: Hero[] = [];
+
   @Input() hero?: Hero;
 }
